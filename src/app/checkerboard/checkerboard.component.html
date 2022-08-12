@@ -1,6 +1,5 @@
 <!--break after {{ count }}-->
-<span (click)="isActive()" *ngFor="let element of templateArr; index as i"
-      [ngClass]="isActive() ? 'active' : 'off'">
-  <div class="break" *ngIf="i === 3 || i === 6"></div>
-  <span class="field">{{ i }}</span>
+<span *ngFor="let element of templateArr; index as i">
+  <div class="break" *ngIf="i === count || i === count * 2 || i === count * 3"></div>
+  <span (click)="active = true" class="field" [ngClass]="active ? 'active' : 'off'"></span>
 </span>

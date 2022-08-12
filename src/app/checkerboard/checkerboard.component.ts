@@ -1,3 +1,5 @@
+// @ts-ignore
+
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
@@ -8,28 +10,29 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CheckerboardComponent implements OnInit {
 
   private _count = 0
+
+
   @Input()
   set count(value: number) {
     this._count = value;
     this.templateArr = [];
-    for( let i = 0; i < value * value; i++) {
+    for (let i = 0; i < value * value; i++) {
       this.templateArr.push(i);
     }
   }
+
   get count(): number {
     return this._count;
   }
 
   templateArr: number[] = [];
 
+  active: boolean = false;
+
   constructor() {
 
   }
 
   ngOnInit(): void {
-  }
-
-  isActive() {
-    return true;
   }
 }
