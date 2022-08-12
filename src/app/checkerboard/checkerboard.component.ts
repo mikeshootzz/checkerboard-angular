@@ -29,4 +29,7 @@ export class CheckerboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isActive() {
+    return true;
+  }
 }

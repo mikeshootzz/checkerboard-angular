@@ -8,3 +8,11 @@
 .break {
   height: 10px;
 }
+
+.active {
+  color: red;
+}
+
+.off {
+  color: green;
+}
