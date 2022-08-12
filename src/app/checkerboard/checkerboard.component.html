@@ -1,8 +1,6 @@
 <!--break after {{ count }}-->
 <span *ngFor="let element of templateArr; index as i">
-  <br *ngIf="i === 3">
-  <br *ngIf="i === 3">
+  <div class="break" *ngIf="i === 3"></div>
   <span class="field">{{ i }}</span>
-    <br *ngIf="i === 5">
-    <br *ngIf="i === 5">
+    <div class="break" *ngIf="i === 5"></div>
 </span>
